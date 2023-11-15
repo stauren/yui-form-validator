@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<script src="../src/yui2.5.1/yui-pack-2.5.1.js"></script>
+<script src="../src/st-validator.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}body{font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}select, input, textarea {font:99% arial,helvetica,clean,sans-serif;}pre, code {font:115% monospace;*font-size:100%;}body * {line-height:1.22em;}body{text-align:center;}#ft{clear:both;}#doc,#doc2,#doc3,.st-ml,.st-mr{margin:auto;text-align:left;width:57.69em;*width:56.3em;min-width:750px;}#doc2{width:73.074em;*width:71.313em;min-width:950px;}#doc3{margin:auto 10px;width:auto;}
+.st-dv{position:relative;}.st-dv{_position:static;}#st-main .st-dv{position:static;}#st-main{width:100%;}
+.st-ml #st-main{float:right;margin-left:-25em;}
+.st-mr #st-main{float:left;margin-right:-25em;}
+.st-ml .st-dv{float:left;width:13.8456em;*width:13.512em;}
+.st-ml #st-main .st-dv{margin-left:14.8456em;*margin-left:14.512em;}
+.st-mr .st-dv{float:right;width:13.8456em;*width:13.512em;}
+.st-mr #st-main .st-dv{margin-right:14.8456em;*margin-right:14.512em;}
+#st-main .st-dv{float:none;width:auto;}
+.st-g .st-in,.st-g .st-g,.st-g21 .st-in,.st-g21 .st-g .st-in,.st-g31 .st-in,.st-g13 .st-in{float:right;display:inline;}.st-g div.first,.st-g21 div.first,.st-g21 div.first div.first,.st-g12 div.first,.st-g31 div.first,.st-g13 div.first{float:left;}.st-g .st-in,.st-g .st-g{width:49.1%;}.st-g .st-g .st-in,.st-g21 .st-g .st-in {width:48.1%;}.st-g111 .st-in,.st-g21 .st-in,.st-g12 .st-in{float:left;margin-left:2%;*margin-left:1.895%;width:32%;}.st-g111 div.first,.st-g21 div.first,.st-g12 div.first{margin-left:0;}.st-g21 div.first,.st-g12 .st-in{width:66%;}.st-g12 div.first{width:32%;}.st-g31 .st-in{width:24%;}.st-g31 div.first,.st-g13 .st-in{width:74.2%;}.st-g13 div.first{width:24%;}.st-g31 div.first{width:74.2%;}#bd:after,.st-g:after,.st-g111:after,.st-g21:after,.st-g12:after,.st-g31:after,.st-g13:after{content:".";display:block;height:0;clear:both;visibility:hidden;}#bd,.st-g,.st-g111,.st-g21,.st-g12,.st-g31,.st-g13{zoom:1;}
+
+/* 10-77%,11-85%,12-92%,13-100%,14-107%,15-114%
+16-122%,17-129%,18-136%,19-144%,20-152%,21-159%
+22-167%,23-174%,24-182%,25-189%,26-197 
+600/13 = 46.15, 46.15*0.9759 = 45.04
+{width:46.15em;*width:45.04em;min-width:600px;}
+
+template: id=doc(,2,3) class=st-ml,st-mr
+grid <div class=st-g, st-g(111),21,12,31,13><div class=st-in first></div><div class=st-in></div></div>
+*/
+.st-font { font-family:verdana; }
+.round b { display:block;height:1px;font-size:1px;overflow:hidden;padding:0px; }
+.round .m1 { margin:0 1px; }
+.round .m2 { margin:0 2px; }
+.round .content { border-width:0px 2px; border-style:solid;overflow:hidden;}
+.round.b1 b, .round.b1 div.title { background-color:#A4C3F9; padding:0 5px;}
+.round.b1 div.content { border-color:#A4C3F9; }
+#bd {overflow:hidden scroll;margin:0.5em 1em 0;}
+#bd h1{font-size:136%;padding:8px 0px;}
+#bd .st-dv li{padding:.3em 0 .3em 1em;}
+#hd .hd-title{height:1.2em;padding:3px 1px;font-size:159%;background:#E5ECF9;border-top:1px solid #3366CC;}
+#hd .logo{margin:0 0 10px;}
+#ft {text-align:center;line-height:2.5em;clear:both;}
+
+.st-module-a {border:1px solid #C5D7EF;background:#E5ECF9;}
+.st-module-a .hd{font-size:10px;margin-top:5px;}
+.st-module-a .hd h2{font-weight:bold;font-size:medium;padding:0pt 5px 5px;}
+.st-module-a .hd h2.click{cursor:pointer;}
+.st-module-a .clearer{clear:both;font-size:0pt;height:0pt;line-height:0pt;overflow:hidden;}
+.st-module-a .bd{clear:both;background:#FFF;overflow:hidden;}
+.st-module-a .bd div.pd{padding:0.5em;}
+.st-module-a div.ft{clear:both;font-size:11px;padding:0pt 10px 10px 0pt;text-align:right;}
+
+#st-main .testForm dt{font-weight:bold;float:left;margin-right:1em;text-align:right;width:13em;line-height:1.6em;clear:left;}
+#st-main .testForm dd{margin:0.3em 0;}
+input.st-validate-input-error, textarea.st-validate-input-error {border:2px solid red;}
+em.active {background:transparent url(../src/img/st_validate_error_arrow_bg.gif) no-repeat scroll 0pt 0pt;}
+em.st-validate-notice.hide {display:none;}
+em.st-validate-notice.hide.active {display:block;}
+em.st-validate-notice {margin-left:10px;padding:1px;width:400px;height:24px;display:block;margin-left:14em;line-height:24px;}
+em.st-validate-notice img {float:left;margin:3px 2px 0 1px;}
+
+</style>
+<title>yui-form-validator example</title>
+</head>
+<body>
+<div id="doc2" class="st-font st-mr">
+  <div id="hd">
+    <div class="hd-title">yui-form-validator example</div>
+  </div>
+  <div id="bd">
+    <div id="st-main">
+      <div class="st-dv">
+        <!--start:st-module-a-->
+        <div class="st-module-a">
+          <div class="hd">
+            <h2 class="title">Examples:</h2>
+          </div>
+          <div class="clearer"></div>
+          <div class="bd">
+            <div class="pd">
+              <form id="test-form1" class="testForm" name="test-form1a" action="http://www.baidu.com" method="get">
+                <dl>
+                  <dt>&nbsp;</dt><dd><input id="clearAll" type="button" value="Clear All"/><input type="submit" value="Submit"/></dd>
+                  <dt>Min length:</dt><dd><input type="text" name="test-form1-name" value="min length=6" /><span>&nbsp;Please input</span><em class="st-validate-notice"></em></dd>
+                  <dt>Not empty:</dt><dd><input type="text" name="test-form1-pwd" title="Password" value="any char is ok" /><span>&nbsp;Put your instruction here</span><em class="st-validate-notice"></em></dd>
+                  <dt>Allow Empty:</dt><dd><input type="text" name="test-form1-allow-empty" class="st-validate-not-required" /></dd>
+                  <dt>Date(YYYY-mm-dd):</dt><dd><input type="text" name="test-form1-date" title="The Date" value="2000-02-12" /></dd>
+                  <dt>Date(mm/dd/YYYY):</dt><dd><input type="text" class="st-validate-date" name="test-form1-name2" value="11/12/2000" /></dd>
+                  <dt>Min value:</dt><dd><input type="text" name="test-form1-name3" value="10" alt="Name 2" /></dd>
+                  <dt>Max value:</dt><dd><input type="text" name="test-form1-name4" value="10" /></dd>
+                  <dt>Max Length:</dt><dd><input type="text" name="test-form1-name5" value="123456" /></dd>
+                  <dt>Min Length:</dt><dd><input type="text" name="test-form1-name6" value="123456789" /></dd>
+                  <dt>Phone:</dt><dd><input type="text" name="test-form1-name7" class="st-validate-phone" value="010-88888888-123" /></dd>
+                  <dt>Mobile:</dt><dd><input type="text" name="test-form1-name8" class="st-validate-mobile" value="13512345678" title="Mobile phone" /></dd>
+                  <dt>Yid:</dt><dd><input type="text" name="test-form1-name9" class="st-validate-yid" value="stauren@yahoo.cn" title="Yid" /></dd>
+                  <dt>Ajax Fail:</dt><dd><input type="text" name="test-form1-name10" value="123456WWW" /><span>&nbsp;Input number only</span><em class="st-validate-notice"></em></dd>
+                  <dt>Ajax OK:</dt><dd><input type="text" name="test-form1-name11" value="abcdef" /><span>&nbsp;Input "abcdef"</span><em class="st-validate-notice"></em></dd>
+                  <dt>Integer Only:</dt><dd><input type="text" name="test-form1-name12" class="st-validate-int" value="1234.5" /></dd>
+                  <dt>Number Only:</dt><dd><input type="text" name="test-form1-name13" class="st-validate-number" value="-0.05e-8" /></dd>
+                  <dt>English Only:</dt><dd><input type="text" name="test-form1-name14" class="st-validate-alpha" value="abcdef" /></dd>
+                  <dt>English & Integer:</dt><dd><input type="text" name="test-form1-name15" class="st-validate-alphanum" value="abcd123_" /><span>&nbsp;Underscore(_) is also accepted</span><em class="st-validate-notice"></em></dd>
+                  <dt>Email:</dt><dd><input type="text" name="test-form1-name16" class="st-validate-email" value="stauren.test@qq.com" /></dd>
+                  <dt>Url:</dt><dd><input type="text" name="test-form1-name17" class="st-validate-url" value="http://stauren.net/tags/stauren" /></dd>
+                  <dt>Chinese(汉字):</dt><dd><input type="text" name="test-form1-name18" class="st-validate-chinese" value="只允许汉字" /></dd>
+                  <dt>Postal Code:</dt><dd><input type="text" name="test-form1-name19" class="st-validate-postal" value="100871" /></dd>
+                  <dt>Radio:</dt><dd><input type="radio" name="test-form1-name20" value="1" />Radio 1&nbsp;<input type="radio" name="test-form1-name20" value="2" />Radio 2&nbsp;<input type="radio" name="test-form1-name20" class="st-validate-needed" value="3" />Radio 3&nbsp;<span>&nbsp;| only Choose 3 could pass</span><em class="st-validate-notice"></em></dd>
+                  <dt>Checkbox:</dt><dd><input type="checkbox" name="test-form1-name21" value="1" />Radio 1&nbsp;<input type="checkbox" name="test-form1-name21" class="st-validate-needed" class="st-validate-needed" value="2" />Radio 2&nbsp;<input type="checkbox" name="test-form1-name21" value="3" />Radio 3&nbsp;<span>&nbsp;| must Choose 2 to pass</span><em class="st-validate-notice"></em></dd>
+                  <dt>Selection:</dt><dd><select name="test-form1-name22">
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                    <option value="10000">10000</option>
+                    <option value="100000">100000</option>
+                    <option value="1000000">1000000</option>
+                    <option value="10000000">10000000</option>
+                  </select><span>&nbsp;</span><em class="st-validate-notice"></em></dd>
+                  <dt>Use group:</dt><dd><input type="text" name="test-form1-name23" value="1980" class="st-validate-int" /><select name="test-form1-name24">
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jly</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                  </select><input type="text" name="test-form1-name25" value="1" class="st-validate-int" /><span>Input birthday</span><em class="st-validate-notice"></em></dd>
+                  <dt>DIY error msg:</dt><dd><input type="text" name="test-form1-name26" value="12345" /></dd>
+                  <dt>Use config class(number):</dt><dd><input type="text" name="test-form1-name27" value="123.45a" /></dd>
+                  <dt>Use alter:</dt><dd><input type="text" name="test-form1-name28" value="" /><input type="text" name="test-form1-name29" value="" /></dd>
+                  <dt>Description:</dt><dd><textarea name="test-form1-desc" id="test-form1-desc-id" title="描述">Not empty is ok</textarea></dd>
+                  <dt>&nbsp;</dt><dd><input type="submit" value="Submit"/></dd>
+                </dl>
+              </form>
+            </div>
+          </div>
+          <div class="ft"></div>
+        </div>
+        <!--end:st-module-a-->
+
+      </div>
+    </div>
+    <div id="st-bar" class="st-dv">
+      <!--
+      <div class="round b1">
+        <b class="m2"></b><b class="m1"></b>
+          <div class="title click">
+            Menu Title
+          </div>
+          <div class="content">
+            <ul>
+              <li>List 1</li>
+              <li>List 2</li>
+            </ul>
+          </div>
+        <b class="m1"></b><b class="m2"></b>
+      </div> -->
+      <div class="st-module-a">
+          <div class="hd">
+            <h2 class="title click">Links</h2>
+          </div>
+          <div class="clearer"></div>
+          <div class="bd">
+            <div class="pd">
+              <ul>
+                <li><a href="http://code.google.com/p/yui-form-validator/">Project Home</a></li>
+                <li><a href="mailto:stauren@qq.com">Contact me</a></li>
+                <li><a href="http://stauren.net">About me</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="ft"></div>
+      </div>
+    </div>
+  </div>
+  <div id="ft">
+    Copyright&nbsp;&copy;2008&nbsp;stauren.net&nbsp;<a href="mailto:stauren@qq.com">Contact me</a> | <a href="http://stauren.net">About me</a> | <a href="http://code.google.com/p/yui-form-validator/">Project Home</a>
+  </div>
+</div>
+<script language="javascript" type="text/javascript">
+;(function() {
+  var _oValidator = new YAHOO.extension.validator('test-form1', {
+    notifyType:'tips', // default tips
+    stopOnFirst : false,
+    imageBase : '../src/img/',
+    onSubmit : true, //default true, intervene the on submit event
+    checkOnBlur : true, //default true, check an input when it losts focus
+    hideSuccess : false // default false
+  });
+  _oValidator.addRules({
+    'test-form1-name' : {
+      desc : '姓名',
+      maxLength : 15,
+      minLength : 6
+    },
+    'test-form1-pwd' : {
+      maxLength : 15,
+      minLength : 5
+    },
+    'test-form1-date' : {
+      mask : /^[12]\d{3}\-[01]\d\-[0-3]\d$/
+    }
+    ,
+    'test-form1-name3' : {
+      minValue : 999999
+    }
+    ,
+    'test-form1-name4' : {
+      maxValue : 2
+    }
+    ,
+    'test-form1-name5' : {
+      maxLength : 5
+    },
+    'test-form1-name6' : {
+      minLength : 10
+    },
+    'test-form1-name10' : {
+      ajax : 'demo_ajax.php?test=1&value='
+    }
+    ,
+    'test-form1-name11' : {
+      ajax : 'demo_ajax.php?test=2&value='
+    }
+    ,
+    'test-form1-name22' : {
+      minValue : 999999
+    }
+    ,
+    'test-form1-name23' : {
+      minValue : 1900,
+      maxValue : 2008,
+      group: ['test-form1-name24', 'test-form1-name25']
+    }
+    ,
+    'test-form1-name25' : {
+      minValue : 1,
+      maxValue : 31
+    },
+    'test-form1-name26' : {
+      maxValue : 1,
+      errorMessage: 'You could define your own error message.'
+    },
+    'test-form1-name27' : {
+      predefined : ['number']
+    },
+    'test-form1-name28' : {
+      alter : 'test-form1-name29'
+    },
+    'test-form1-name29' : {
+      alter : 'test-form1-name28'
+    }
+  });
+  _oValidator.validate();
+  YAHOO.util.Event.on('clearAll', 'click', _oValidator.clearAll, _oValidator, true);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+yui-form-validator
+
+  put the following folder in to your HTTP server's htdocs 
+  (for example, put into /var/www/yui-form-validator)
+
+--
+ -+ example
+ -+ src
+
+start your server and go to http://localhost/yui-form-validator/example/index.html to read the examples.

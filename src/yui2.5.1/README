@@ -1,0 +1,12 @@
+YUI 2.5.1 library files:
+
+  yahoo-dom-event.js
+  selector-beta-min.js
+  json-min.js
+  connection-min.js
+
+A package of the 4 files:
+
+  yui-pack-2.5.1.js
+
+You could also use yuiLoader to load them directly include them from http://yui.yahooapis.com
